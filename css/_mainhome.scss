@@ -1,0 +1,277 @@
+/* ------------------ MAIN*/
+.sectionPadding {
+  padding-top: 93px;
+  padding-bottom: 93px;
+}
+
+.h2-Home {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 117%; //42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $colorBasic;
+  padding-bottom: 50px;
+}
+
+.h3-Home h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 119%; /* identical to box height 19px;*/
+  letter-spacing: 0.03em;
+
+  color: $colorBasic;
+
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+/* section class="poster" */
+.poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: $colorPoster;
+  height: 600px;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+  }
+  div {
+    position: absolute;
+    width: 696px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 136%; /* or 60px */
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: $colorWhite;
+  }
+
+  .btn- {
+    &max {
+      @include button();
+      width: 216px;
+      height: 60px;
+      margin-top: 30px;
+    }
+  }
+}
+
+/* section class="studioFeatures" */
+.studioFeatures {
+  padding-top: 93px;
+  h2 {
+    display: none;
+  }
+}
+
+.studioInfo {
+  @include flex();
+  columns: 4;
+  gap: 30px;
+  li {
+    div {
+      display: flex;
+      background-color: $colorBackground;
+    }
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $colorBasic;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px; /* or 171% */
+    letter-spacing: 0.03em;
+
+    color: $colorMailtoTel;
+  }
+}
+
+.studioImg img {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* section class="what-we-do" */
+
+.what-we-do {
+  @include flex();
+  columns: 3;
+  gap: 30px;
+  li {
+    max-width: 370px;
+  }
+  h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 115%; //16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $colorWhite;
+  }
+  figure {
+    position: relative;
+    overflow: hidden;
+    &:hover figcaption {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    &:focus figcaption {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    &:hover img {
+      transform: scale(1.15);
+    }
+    &:focus img {
+      transform: scale(1.15);
+    }
+    img {
+      display: block;
+      width: 100%;
+      transition: 0.5s;
+    }
+  }
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+  }
+}
+
+/* section team */
+.team-color-bg {
+  background-color: $colorBackground;
+}
+.team {
+  //@include flex();
+  margin: 0 auto;
+  columns: 4;
+  gap: 2.5vw;
+  h3 {
+    text-align: center;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119%; /* identical to box height 19px;*/
+    letter-spacing: 0.03em;
+
+    color: $colorMailtoTel;
+    text-align: center;
+  }
+}
+
+.team-colums {
+  max-width: 270px; /* ПРАВИТЬ */
+  background-color: $colorWhite;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  img {
+    width: 100%;
+  }
+
+  .social-networks {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 16px;
+    padding-bottom: 30px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      cursor: pointer;
+      &:hover {
+        background-color: $colorBasic2;
+        & > a {
+          color: $colorWhite;
+        }
+      }
+      &:focus {
+        background-color: $colorBasic2;
+        & > a {
+          color: $colorWhite;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $colorico;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/* section client*/
+.client {
+  @include flex();
+  columns: 6;
+  gap: 2.5vw;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    &:hover {
+      border-color: $colorBasic2;
+      & > a {
+        color: $colorBasic2;
+      }
+    }
+    &:focus {
+      border-color: $colorBasic2;
+      & > a {
+        color: $colorBasic2;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $colorico;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+/* __________________ ICO _________________________________________________________________ */
+/* ------------------- Fonts ICO ---------------*/
+
+@import "ico-variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('../fonts/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q28sss');
+  src:  url('../fonts/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q28sss#iefix') format('embedded-opentype'),
+    url('../fonts/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?q28sss') format('truetype'),
+    url('../fonts/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?q28sss') format('woff'),
+    url('../fonts/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?q28sss##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  //speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ico-brand-brand {
+  font-size: 45px;
+  &:before {
+    content: $icon-ico-brand-brand; 
+  }
+}
+.icon-ico-brand-company {
+  font-size: 41px;
+  &:before {
+    content: $icon-ico-brand-company; 
+  }
+}
+.icon-ico-brand-company_tg-line {
+  font-size: 44px;
+  &:before {
+    content: $icon-ico-brand-company_tg-line; 
+  }
+}
+.icon-ico-brand-foster {
+  font-size: 41px;
+  &:before {
+    content: $icon-ico-brand-foster; 
+  }
+}
+.icon-ico-brand-tige-line {
+  font-size: 52px;
+  &:before {
+    content: $icon-ico-brand-tige-line; 
+  }
+}
+.icon-ico-brand-ya-co {
+  font-size: 47px;
+  &:before {
+    content: $icon-ico-brand-ya-co; 
+  }
+}
+.icon-ico-envelope {
+  &:before {
+    content: $icon-ico-envelope; 
+  }
+}
+.icon-ico-facebook {
+  &:before {
+    content: $icon-ico-facebook; 
+  }
+}
+.icon-ico-instagram {
+  &:before {
+    content: $icon-ico-instagram; 
+  }
+}
+.icon-ico-linkedin {
+  &:before {
+    content: $icon-ico-linkedin; 
+  }
+}
+.icon-ico-smartphone {
+  &:before {
+    content: $icon-ico-smartphone; 
+  }
+}
+.icon-ico-twitter {
+  &:before {
+    content: $icon-ico-twitter; 
+  }
+}
+

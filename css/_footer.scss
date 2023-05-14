@@ -1,0 +1,139 @@
+footer {
+  background-color: $colorBackground-footer;
+
+  & a {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%; /* 24px or 171% */
+    letter-spacing: 0.03em;
+    color: $colorWhite;
+    &:hover {
+      color: $colorBasic2;
+    }
+    &:focus {
+      color: $colorBasic2;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: $colorWhite;
+    padding-top: 72px;
+    padding-bottom: 20px;
+  }
+}
+
+.footer {
+  @include flex();
+
+  .logo {
+    span {
+      color: $colorWhite;
+    }
+  }
+
+  address {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-width: 212px;
+    ul {
+      padding-top: 20px;
+    }
+    li:nth-child(2) > a {
+      opacity: 0.6;
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+    li:nth-child(3) > a {
+      opacity: 0.6;
+    }
+  }
+}
+
+.footer-join {
+  margin-left: 16px;
+  margin-right: 16px;
+
+  .social-networks {
+    display: flex;
+    justify-content: space-between;
+    width: 206px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 22px;
+      cursor: pointer;
+      & a:focus {
+        color: $colorBasic2;
+      }
+      &:hover {
+        background-color: $colorBasic2;
+        & > a {
+          color: $colorWhite;
+        }
+      }
+    }
+  }
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+
+  width: 570px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  input {
+    width: 100%;
+    max-width: 340px; //width: 358px;
+    height: 48px; // height: 50px;
+    border-style: solid;
+    border: 1px;
+    border-color: $colorWhite;
+    opacity: 0.3;
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    margin-bottom: 16px;
+    &[placeholder] {
+      padding-left: 16px;
+    }
+  }
+  button {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: $colorBasic2;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 188%; /* identical to box height, or 30px; */
+    letter-spacing: 0.06em;
+
+    color: $colorWhite;
+
+    &:hover {
+      background-color: $colorButton-hover;
+    }
+    &:focus {
+      background-color: $colorButton-hover;
+    }
+  }
+}

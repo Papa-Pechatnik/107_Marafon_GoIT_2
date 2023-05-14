@@ -1,0 +1,96 @@
+/* __________________ Home page_________________________________________________________________ */
+/* ------------------- header ---------------*/
+.container {
+  .nav {
+    @include flex();
+    max-width: 519px; /* ширина лого + навиация width: 519px; */
+    width: 100%;
+  }
+}
+
+header {
+  @include flex();
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  li {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 115%; //16px
+    letter-spacing: 0.02em;
+    list-style: none;
+    align-self: center;
+  }
+}
+
+.logo {
+  @include logo();
+  align-self: center;
+  padding-right: 42px;
+
+  span {
+    color: $color;
+  }
+}
+
+.menu {
+  max-width: 281px;
+  width: 100%;
+  padding-top: 31px;
+}
+
+.nav-hover {
+  display: flex;
+  flex-direction: column;
+  a {
+    color: $colorBasic;
+    padding-bottom: 28px;
+    &:hover {
+      color: $colorBasic2;
+      & + .hover {
+        visibility: visible;
+      }
+    }
+    &:focus {
+      color: $colorBasic2;
+      & + .hover {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.hover {
+  visibility: hidden;
+  width: 100%;
+  border: 2px solid $colorBasic2;
+  border-radius: 2px;
+}
+
+.mailto-tel {
+  @include flex();
+  width: 307px;
+  min-width: 270px;
+  padding-left: 20px;
+  a {
+    color: $colorMailtoTel;
+  }
+  :hover {
+    color: $colorBasic2;
+  }
+  :focus {
+    color: $colorBasic2;
+  }
+}
+
+.active {
+  a {
+    color: $colorBasic2;
+  }
+  & .hover {
+    visibility: visible;
+  }
+}
+
+/* END header*/
